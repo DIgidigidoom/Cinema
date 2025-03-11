@@ -1,0 +1,101 @@
+:root {
+    --seat-color: #761818;
+    --booked-color: red;
+    --selected-color-popUp: orange;
+    --booked-hover: gray;
+    --vacant-seat-highlight: rgb(51, 194, 19);
+}
+
+body {
+    background: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px 2px gray;
+    color: orange
+}
+
+.cinema {
+    width: 600px;
+    margin: 60px auto;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.cell {
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+}
+
+.seat {
+    background-color:var(--seat-color);
+    cursor: pointer;
+    transition: 1s;
+}
+
+.selected {
+    background-color: var(--selected-color-popUp);
+}
+
+.booked {
+    background-color: var(--booked-color);
+
+}
+
+.seat.booked:hover {
+    background-color: var(--booked-hover);
+    cursor: not-allowed;
+}
+
+.btn-book-seat {
+
+    display: block;
+    border-radius: 50%;
+    height: 60px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.hl-negs-seats {
+    margin: 20px auto;
+    display: block;
+    border-radius: 50%;
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    font-size: 60px;
+    cursor: pointer;
+
+}
+
+.popup {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 5%;
+    background-color: var(--selected-color-popUp);
+    padding: 20px;
+    box-shadow: 5px 5px 15px 5px gray;
+}
+
+.popup .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.highlighted {
+    background-color: var(--booked-hover);
+    transition: 1s
+}
